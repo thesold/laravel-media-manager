@@ -25,7 +25,10 @@ class CloudinaryMediaLibrary implements MediaLibrary
 
     public function resources(String $type = null)
     {
-        return $this->api->resources($type);
+        return $this->api->resources([
+            'resource_type' => $type ? : 'image',
+            'max_results' => 100,
+        ]);
     }
 
     public function upload(String $file, array $options = [])
