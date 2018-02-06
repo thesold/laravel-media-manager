@@ -1,0 +1,32 @@
+{
+    "name": "thesold/laravel-media-manager",
+    "description": "Laravel Media Manager for use with Vue Media Manager",
+    "type": "library",
+    "license": "Apache-2.0",
+    "authors": [
+        {
+            "name": "Marco Mark",
+            "email": "marco@silvanite.com"
+        }
+    ],
+    "require": {
+        "php": ">=7.0.0",
+        "barryvdh/laravel-cors": "^0.11.0",
+        "cloudinary/cloudinary_php": "^1.8"
+    },
+    "require-dev": {
+        "squizlabs/php_codesniffer": "^3.1"
+    },
+    "autoload": {
+        "psr-4": {
+            "Thesold\\LaravelMediaManager\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Thesold\\LaravelMediaManager\\Providers\\MediaServiceProvider"
+            ]
+        }
+    }
+}

@@ -1,0 +1,26 @@
+{
+    "name": "laravel-media-manager",
+    "version": "1.0.0",
+    "description": "Laravel Media Manager for use with Vue Media Manager",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "precommit": "lint-staged"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/thesold/laravel-media-manager.git"
+    },
+    "author": "Marco Mark <marco@silvanite.com>",
+    "license": "Apache-2.0",
+    "bugs": {
+        "url": "https://github.com/thesold/laravel-media-manager/issues"
+    },
+    "homepage": "https://github.com/thesold/laravel-media-manager#readme",
+    "devDependencies": {
+        "husky": "^0.14.3",
+        "lint-staged": "^6.0.0",
+        "markdownlint-cli": "^0.5.0",
+        "jsonlint": "^1.6.0"
+    }
+}
