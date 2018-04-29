@@ -27,7 +27,7 @@ You are free to publish the `laravelmediamanager.php` config to customise the pa
 
 ## Drivers
 
-Currently the only available driver is Cloudinary. You will need a cloudinary account.
+Currently the only available driver is Cloudinary. You will need a free cloudinary account.
 
 ```sh
 # .env
@@ -40,7 +40,7 @@ LARAVELMEDIAMANAGER_API_SECRET=cloudinary-api-secret
 
 ## Usage
 
-The package includes all routes, middleware and controllers to enable the Vue media library.
+The package includes all routes, middleware and controllers to enable the Vue media library. Simply install [thesold/vue-media-manager](https://github.com/thesold/vue-media-manager) and follow the instructions to specify your Laravl Media Manager URL.
 
 ## Support
 
