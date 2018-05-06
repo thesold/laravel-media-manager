@@ -83,7 +83,7 @@ class MediaController extends Controller
                 'filename' => "{$key['public_id']}.{$key['format']}"
             ])
             ->merge([
-                'thumbnail_url' => cloudinary_url($key['public_id'], [
+                'thumbnail_url' => $this->library->url($key, [
                     "secure" => true,
                     "width" => 250,
                     "height" => 250,
@@ -91,7 +91,7 @@ class MediaController extends Controller
                     "gravity" => "face",
                 ])
             ])->merge([
-                'scaled_url' => cloudinary_url($key['public_id'], [
+                'scaled_url' => $this->library->url($key, [
                     "secure" => true,
                     "width" => $width,
                     "height" => is_null($height) ? null : $height,
@@ -131,8 +131,8 @@ class MediaController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Request $request, $id)
     {
-        return $this->library->delete($id);
+        return $this->library->delete($id, $request->all());
     }
 }
