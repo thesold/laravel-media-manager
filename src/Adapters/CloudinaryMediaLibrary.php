@@ -35,4 +35,9 @@ class CloudinaryMediaLibrary implements MediaLibrary
     {
         return \Cloudinary\Uploader::Upload($file, $options);
     }
+
+    public function url(String $file, array $options = [])
+    {
+        return cloudinary_url($file['public_id'], $options);
+    }
 }
