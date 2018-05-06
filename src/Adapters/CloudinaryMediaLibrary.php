@@ -31,12 +31,12 @@ class CloudinaryMediaLibrary implements MediaLibrary
         ]);
     }
 
-    public function upload(String $file, array $options = [])
+    public function upload($file, array $options = [])
     {
         return \Cloudinary\Uploader::Upload($file, $options);
     }
 
-    public function url(String $file, array $options = [])
+    public function url($file, array $options = [])
     {
         return cloudinary_url($file['public_id'], $options);
     }
