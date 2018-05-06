@@ -19,9 +19,9 @@ interface MediaLibrary
     /**
      * Upload a file to the media library
      *
-     * @param String $file
+     * @param $file
      * @param array $options
      * @return array
      */
-    public function upload(String $file, array $options = []);
+    public function upload($file, array $options = []);
 }
