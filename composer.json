@@ -12,7 +12,8 @@
     "require": {
         "php": ">=7.0.0",
         "barryvdh/laravel-cors": "^0.11.0",
-        "cloudinary/cloudinary_php": "^1.9"
+        "cloudinary/cloudinary_php": "^1.9",
+        "intervention/image": "^2.4"
     },
     "require-dev": {
         "squizlabs/php_codesniffer": "^3.1"
