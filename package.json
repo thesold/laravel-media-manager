@@ -1,6 +1,6 @@
 {
     "name": "laravel-media-manager",
-    "version": "1.0.0",
+    "version": "1.1.0",
     "description": "Laravel Media Manager for use with Vue Media Manager",
     "main": "index.js",
     "scripts": {
