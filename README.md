@@ -27,7 +27,21 @@ You are free to publish the `laravelmediamanager.php` config to customise the pa
 
 ## Drivers
 
-Currently the only available driver is Cloudinary. You will need a free cloudinary account.
+### Default (File) driver
+
+The default driver uses the Intervention Image library to perform basic resizing and cropping. You can customise the image and upload folders.
+
+```sh
+# .env
+
+LARAVELMEDIAMANAGER_DRIVER=default
+LARAVELMEDIAMANAGER_FOLDER=media # The folder inside the public path where resized images are stored
+LARAVELMEDIAMANAGER_UPLOAD_FOLDER=mediamanager # The upload folder within the storage directory where original images (uploads) are stored. These are not publicly accessible
+```
+
+### Cloudinary driver
+
+Cloudinary is a cloud based media library offering excellent image optimisation and resizing including facial recognition and focal point cropping. A free cloudinary account is required to use this driver.
 
 ```sh
 # .env
