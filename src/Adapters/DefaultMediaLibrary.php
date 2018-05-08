@@ -107,7 +107,9 @@ class DefaultMediaLibrary implements MediaLibrary
         $image = Image::make(Storage::get("{$this->uploadFolder}/{$originalFilename}"));
 
         if (!$width || !$height) {
-            $image->resize($width, $height);
+            $image->resize($width, $height, function ($constraint) {
+                $constraint->aspectRatio();
+            });
         } else {
             $image->fit($width, $height);
         }

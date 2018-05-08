@@ -73,7 +73,7 @@ class MediaController extends Controller
         //
     }
 
-    public function resources($type = null, $mode = "thumb", $width = "1280", $height = null, $gravity = "face")
+    public function resources($type = null, $mode = "thumb", $width = null, $height = null, $gravity = "face")
     {
         $resources = collect($this->library->resources($type))->collapse();
 
@@ -93,12 +93,12 @@ class MediaController extends Controller
             ])->merge([
                 'scaled_url' => $this->library->url($key, [
                     "secure" => true,
-                    "width" => $width,
-                    "height" => is_null($height) ? null : $height,
+                    "width" => $width > 0 ? $width : null,
+                    "height" => $height > 0 ? $height : null,
                     "crop" => $mode,
                     "gravity" => $gravity,
                 ])
-            ]);
+            ])->filter();
         })->all();
     }
 
